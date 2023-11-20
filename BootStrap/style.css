@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Orbitron:wght@400;500&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Orbitron:wght@400;500&family=Shadows+Into+Light&family=Yellowtail&display=swap');
+body{
+    background-image: url("./rm183-wan-11.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+}
+
+.main{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    font-size: 3em;
+}
+
+.name{
+    width:55%;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+}
+
+.designation{
+    width: 40%;
+    font-family: 'Yellowtail', cursive;
+   text-align: end;
+}
