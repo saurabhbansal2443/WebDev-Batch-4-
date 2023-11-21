@@ -10,29 +10,47 @@
             width: 100px ;
             border: 2px solid red ;
         }
+
+        .circle{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px ;
+            border: 2px solid red ;
+        }
     </style>
 </head>
 <body>
-    <input type="number"> <button> Add </button>
+    <input type="number">
+    <select class="se">
+        <option> circle</option>
+        <option> box </option>
+    </select>
+     <button> Add </button>
+
     <div class="main">
-    
+      
     </div>
 </body>
 <script>
+   
      let inputTag = document.querySelector("input");
      let btn = document.querySelector("button");
      let mainCont = document.querySelector(".main");
 
+     let DropDown = document.querySelector(".se");
+
      btn.addEventListener("click",function(){
         mainCont.innerHTML="";
-        
+
+      
+
         let n = inputTag.value;
 
         for(let i=1;i<=n;i++){
 
         let cont = document.createElement("div");
 
-        cont.classList.add("box");
+        cont.classList.add(DropDown.value);
 
         mainCont.appendChild(cont);
 
