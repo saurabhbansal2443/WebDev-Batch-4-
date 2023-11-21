@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px ;
+            border: 2px solid red ;
+        }
+    </style>
+</head>
+<body>
+    <input type="number"> <button> Add </button>
+    <div class="main">
+    
+    </div>
+</body>
+<script>
+     let inputTag = document.querySelector("input");
+     let btn = document.querySelector("button");
+     let mainCont = document.querySelector(".main");
+
+     btn.addEventListener("click",function(){
+        mainCont.innerHTML="";
+        
+        let n = inputTag.value;
+
+        for(let i=1;i<=n;i++){
+
+        let cont = document.createElement("div");
+
+        cont.classList.add("box");
+
+        mainCont.appendChild(cont);
+
+        }
+
+
+     })
+
+
+</script>
+</html>
