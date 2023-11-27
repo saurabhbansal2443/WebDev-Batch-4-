@@ -53,8 +53,10 @@ gameBoard.addEventListener("click", function (event) {
     count++;
 
     if (turn == "X") {
+        targetEle.style.color="red";
       turn = "0";
     } else {
+        targetEle.style.color="blue";
       turn = "X";
     }
 
