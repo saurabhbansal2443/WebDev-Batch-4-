@@ -10,7 +10,6 @@
             width: 100%;
             min-height: 100vh;
             background-color:grey;
-            border: 2px solid black;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
@@ -19,32 +18,32 @@
         }
     </style>
   </head>
-  <body>
+  <body onload="callQuery()">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">News</a>
+          <a class="navbar-brand" href="#" onclick="callQuery()">News</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sports</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="callQuery('sports')">Sports</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Enterainment</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="callQuery('crypto')">Crypto</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Politics</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="callQuery('education')" >Education</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Defence</a>
+                <a class="nav-link active" aria-current="page" href="#" onclick="callQuery('defence')" >Defence</a>
               </li>
               
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+              <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
             </form>
           </div>
         </div>

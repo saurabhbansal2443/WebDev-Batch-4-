@@ -1,17 +1,29 @@
-let apiKey = "pub_34321de1e5f6ef996d3a1c839cada8a61b373";
+let apiKey = "pub_343096e83ca33bc4e6ca3922fbf3d4a4005ae";
 let mainCont = document.querySelector(".mainContainer");
+let sInput = document.querySelector("#searchInput");
+let btn = document.querySelector("#searchButton");
 
 console.log(mainCont)
 
-async function getData(query){
-    let data = await fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}&language=en`)
-    let obj = await data.json();
-    ScreenUpdate(obj.results);
-}
+// btn.addEventListener("click" , function(){
+//   console.log(sInput.value)
+//   callQuery(sInput.value);
+// })
+// function callQuery (query="latest News" ){
+//   console.log(query);
+//   getData(query)
+// }
 
-getData("sports");
+// async function getData(query){
+//     let data = await fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}&language=en`)
+//     let obj = await data.json();
+//     ScreenUpdate(obj.results);
+// }
+
+// getData("programming");
 
 function ScreenUpdate(arr){
+  mainCont.innerHTML="";
     for(let i=0;i<arr.length;i++){
         let obj = arr[i];
     let imageLink = obj.image_url;

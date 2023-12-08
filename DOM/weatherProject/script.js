@@ -10,20 +10,20 @@ let timeTag = document.querySelector("#time")
 let windspeedTag = document.querySelector("#wspeed")
 let icontag = document.querySelector("#icon")
 
-// let myApi = "https://api.weatherapi.com/v1/current.json?key=ed8c37818a944c29adf40311232510&q=gwalior&aqi=no"
-function searchFunction(){
-   let city = inputTag.value;
-  console.log(city);
-  inputTag.value=""
-  fetchData(city);
-}
-searchBtn.addEventListener('click',searchFunction);
-inputTag.addEventListener("keydown",function(e){
+
+// function searchFunction(){
+//    let city = inputTag.value;
+//   console.log(city);
+//   inputTag.value=""
+//   fetchData(city);
+// }
+// searchBtn.addEventListener('click',searchFunction);
+// inputTag.addEventListener("keydown",function(e){
     
-  if(e.key == "Enter"){
-    searchFunction();
-  }
-})
+//   if(e.key == "Enter"){
+//     searchFunction();
+//   }
+// })
 
 async function fetchData(city){
     let data = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`);
